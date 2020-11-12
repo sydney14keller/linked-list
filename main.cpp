@@ -66,11 +66,11 @@ employee_data *root, *current_node, *new_node;
 
     // Fill in the data from the first employee.
 
-infile  >> employee->firstname >> employee->lastname >> employee->initial
-        >> employee->ID >> employee->hours >> employee->wage
-        >> employee->pay;
+infile  >> current_node->firstname >> current_node->lastname >> current_node->initial
+        >> current_node->ID >> current_node->hours >> current_node->wage
+        >> current_node->pay;
 
-    print_data(*employee);
+    print_data(*current_node);
 
     //set link to null
 
@@ -109,7 +109,7 @@ infile  >> employee->firstname >> employee->lastname >> employee->initial
         // 3. Traverse the linked list printing out the data for each employee
         // You can call the print_data function in a loop for this.
 
-    while (current_node != NULL)
+    while (current_node != current_node->link)
         {
             cout << "EMPLOYEE RECORD"; skip2
 
